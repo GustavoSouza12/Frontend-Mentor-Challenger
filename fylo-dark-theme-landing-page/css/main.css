@@ -1,0 +1,555 @@
+@import url(https://fonts.google.com/specimen/Raleway);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+
+:root{
+    /*background colors */
+    --intro-and-email-bg: hsl(217, 28%, 15%);
+    --main-bg:  hsl(218, 28%, 13%);
+    --footer-bg:  hsl(216, 53%, 9%);
+    --testimonials-bg: hsl(219, 30%, 18%);
+
+    /*neutral font color */
+    --white: hsl(0, 0%, 100%);
+
+    /*call to action colors */
+    --action-color-cyan: hsl(176, 68%, 64%);
+    --action-color-blue: hsl(198, 60%, 50%);
+}
+*{
+    padding:0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+}
+h1{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 45px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    font-Family: 'Raleway', sans-serif;
+    color: var(--white);
+    line-height: 62px;
+}
+h2{
+    font-Family: 'Raleway', sans-serif;
+    font-size: 45px;
+    color: var(--white)
+}
+body{
+    background: var(--main-bg);
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    color: rgb(231, 231, 231);
+}
+
+/*Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    background: var(--intro-and-email-bg);
+   
+}
+.logo{
+    width: 12%;
+    opacity: 0;
+}
+header ul{
+    display: flex;
+    opacity: 0;
+}
+header ul li{
+    padding: 0 20px;
+    list-style-type: none;
+}
+header ul, .logo{
+    opacity: 0;
+
+
+    animation-name: introAnimation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+
+    -webkit-animation-name: introAnimation;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+header ul li a:hover{
+    color: var(--action-color-cyan)
+}
+
+/*intro section */
+
+.intro{
+    text-align: center;
+    background: var(--intro-and-email-bg);
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 50px 0 100px 0;
+
+}
+.intro-img{
+    width: 50%;
+    height: auto;
+    animation-name: introAnimation;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    
+    -webkit-animation-name: introAnimation;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-duration: 2s;
+
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+@-webkit-keyframes introAnimation{
+    0%{}
+    100%{opacity: 1;transform: translateY(0);}
+}
+@keyframes introAnimation{
+    0%{}
+    100%{opacity: 1;transform: translateY(0);}
+}
+.intro p{
+    width: 55%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.button{
+    cursor: pointer;
+    margin-top: 20px;;
+    margin-bottom: 100px;
+    width: 16%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, var(--action-color-cyan), var(--action-color-blue)) ;
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+    font-weight: 700;
+    transition: 0.3s;
+}
+.button:hover{
+   
+    font-size: 1.2em;
+}
+/*icons section */
+
+.icons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 2;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.icons div{
+    padding: 0px 140px 0px 140px;
+}
+.icons img{
+    margin-top: 30px;
+    height: 80px;
+    width: auto;
+}
+h4{
+    font-size: 20px;
+    margin: 20px 0px 10px 0px;
+    color: var(--white)
+}
+
+/* stay productive */
+
+.stay-productive{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.productive-img{
+    width: 85%;
+    margin-left: 40px;
+    height: auto;
+}
+.productive-content h2{
+    margin-top: 105px;
+    width: 60%;
+}
+.productive-content p{
+    margin: 20px 70px 20px 0px;
+}
+.productive-content a{
+    color: var(--action-color-cyan);
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5 ;
+}
+.productive-content a .arrow-icon{
+    margin-bottom: -4px;
+    margin-left: 2px;
+}
+.productive-content a .cyan-line{
+    border-bottom: 1px solid var(--action-color-cyan);
+    padding-bottom: 4px;
+}
+
+/* testimonials */
+
+.testimonials{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+.testimonials .card{
+    position: relative;
+    margin-top: 50px;
+    max-width: 350px;
+    height:200px;
+    margin: 10px;
+    background-color: var(--testimonials-bg) ;
+    box-shadow: 7px 7px 2px rgb(105,105, 105, 0.1)	;
+}
+.testimonials .card .quotes{
+    position: absolute;
+    top: -18%;
+    left: -3%;
+    z-index: -1;
+}
+.testimonials .card .comment{
+    width: 100%;
+    height: 40%;
+}
+.testimonials .card .comment p{
+    margin: 20px 30px 0px 30px;
+}
+.testimonials .card .profile-container{
+    display: flex;
+    width: 70%;
+    margin: 50px 30px 10px 30px;
+}
+.testimonials .card .profile-container .profile-img{
+    height: 35px;
+    width: 35px;
+    border-radius: 90%;
+}
+.testimonials .card .profile-container h5{
+    margin: 6px;
+}
+.testimonials .card .profile-container h6{
+    font-weight: normal;
+    margin: 0 6px;
+}
+
+/* footer */
+
+footer{
+    position: relative;
+    margin-top: 340px;
+    padding-top: 200px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background-color: var(--footer-bg);
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    justify-content: center;
+    padding: 10px;;
+    padding-bottom: 70px;
+   
+}
+.footer-content .margin-colums{
+    margin: 0 auto;
+}
+.footer-content .location, .footer-content .nav-footer{
+    display: flex;
+}
+.footer-content .location i{
+    margin-top: 2.5px;
+    font-size: 20px;
+}
+.footer-content .contact, .footer-content .nav-footer ul li{
+    display: flex;
+    margin-bottom: 12px;
+
+}
+.nav-footer ul{
+    margin: 0 25px;
+}
+.nav-footer ul li{
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.nav-footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-content .contact img, .footer-content .location i {
+    padding: 0px 15px 0px 15px;
+}
+.social-icons i {
+    font-size: 14px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+    border: 1px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 2px;
+}
+.footer-content .social-icons a{
+    text-decoration: none;
+}
+.footer-content .social-icons a i:hover{
+    color: var(--action-color-blue);
+    border: 1px solid var(--action-color-blue);
+}
+footer .copy{
+   margin-left: auto;
+   margin-right: auto;
+    width: 50%;
+}
+footer .copy{
+    text-align: center;
+}
+footer .copy a{
+    text-decoration: underline;
+    padding-bottom: 2px;
+    color: var(--action-color-blue);
+    letter-spacing: 0.5px;
+
+}
+
+/* submit email container */
+
+.email{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 195%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10000;
+    width: 70%;
+    max-height: 220px;
+    background-color: var(--intro-and-email-bg);
+}
+.email h3{
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom:20px;
+    color: var(--white)
+}
+.email p{
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+.button2{
+    cursor: pointer;
+    width: 20%;
+    height: 42px;
+    font-size: 1vw;
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    background: linear-gradient(90deg, var(--action-color-cyan), var(--action-color-blue)) ;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.button2:hover{
+    font-size: 1.1em;
+}
+.email form .input{
+    float: center;
+    width: 55%;
+    height: 42px;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 25px;
+    border: none;
+    border-radius: 25px;
+}
+@media only screen and (max-width : 768px) {
+    body{
+        max-width: 768px;
+    }
+    h1{
+        width: 80%;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    /*intro mobile */
+
+    .logo{
+        width: 16%;
+    }
+    .intro{
+        padding: 50px 0 0px 0;
+    }
+    .intro-img{
+        width: 75%;
+        height: auto;
+    }
+    .intro p{
+        width: 75%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .button{
+        margin-top: 25px;;
+        margin-bottom: 40px;
+        width: 55%;
+        height: 50px;
+    }
+
+    /* icons mobile */
+
+    .icons{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row: 4;
+    }
+    .icons div{
+        padding: 70px 35px 0px 35px;
+    }
+    .icons img{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        height: 55px;
+        width: auto;
+    }
+    .icons h4{
+        font-size: 17px;
+    }
+
+    /* stay productive container */ 
+    
+    .stay-productive{
+        margin-top: 170px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .productive-img{
+        text-align: center;
+        margin-right: 0;
+    }
+    .productive-content h2{
+        margin-top: 30px;
+        font-size: 24px;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .productive-content p{
+        margin: 20px 20px 20px 10px;
+    }
+    .productive-content a {
+        padding: 20px 20px 20px 10px;
+    }
+    
+    /*testimonials mobile */
+      
+    .testimonials{
+        grid-template-columns: repeat(1, 1fr);
+       margin-top: 150px;
+    }
+    .testimonials .card{
+        margin: 18px auto;
+    }
+
+    /* submit email container mobaile */
+
+    .email{
+        top: 130%;
+        max-height: 300px;
+        width: 70%;
+    }
+    .email h3{
+        font-size: 17px;
+        
+    }
+    .email p{
+        width: 85%;
+        font-size: 12px;
+        margin-bottom: -15px;
+    }
+
+    .email form .input, .button2{
+        width: 80%;
+        float: center;
+    }
+    .email form .input{
+        margin:  20px 0;
+        margin-right: 0;
+        padding-left: 0px;
+    }
+    .button2{
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+    /* footer mobile */
+    footer{
+        position: relative;
+        margin-top: 340px;
+        padding-top: 200px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        
+        background-color: var(--footer-bg);
+        
+    }
+    footer .logo{
+        width: 30%;
+        padding-left: 27px;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row: 1;
+    }
+    .footer-content .location{
+        margin: 0 auto;
+        padding-bottom: 15px;
+    
+    }
+    .footer-content .contact{
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+    .footer-content .contact img, .footer-content .location i {
+        padding: 0px 10px 0px 10px;
+       
+    }
+   
+}
+@media only screen and (max-width : 375px){
+    body{
+        max-width: 375px;
+    }
+}
+  
+ 
+  
