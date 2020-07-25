@@ -27,10 +27,12 @@
 body {
     width: 1440px;
     margin: 0 auto;
-    background-color: var(--light-grayash-violet);
+    background-color: var(--white);
     font-size: 16px;
-    color:var(--white);
+    
     font-family: Rubik;
+
+    
 }
 
 .background-shape{
@@ -40,6 +42,20 @@ body {
     border-radius: 0 0 299px 299px;
     margin-left: -100px;
     z-index: -2312;
+}
+.background-shape2{
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+
+    width: 30%;
+    height: 87vh;
+    background-color: var(--light-grayash-violet);
+    border-radius: 299px 299px 0 0;
+   
+    
+   
+   
 }
 .screen {
     position: absolute;
@@ -74,6 +90,65 @@ body {
     border-radius: 0 0 14px 14px;
     background-color: var(--white);
 }
+
+/* arrow header */
+
+.arrow1{
+    position: absolute;
+    left: 8%;
+    top: 51%;
+
+    height: 6px;
+    width: 2px;
+    transform: rotate(25deg);
+    border-radius: 1px;;
+    background-color: var(--white);
+}
+.arrow2{
+    position: absolute;
+    left: 8%;
+    top: 59%;
+
+    height: 6px;
+    width: 2px;
+    transform: rotate(-25deg);
+    border-radius: 1px;
+    background-color: var(--white);
+}
+
+/* Menu header */
+
+menu{
+    position: absolute;
+    top: 90%;
+}
+.point1, .point2, .point3{
+    height: 3px;
+    width: 3px;
+    background-color: var(--white);
+   
+}
+.point1{
+    position: absolute;
+    right: 8%;
+    top: 52%;
+
+    
+
+}
+.point2{
+    position: absolute;
+    right: 8%;
+    top: 60%;
+
+
+
+}
+.point3{
+    position: absolute;
+    right: 8%;
+    top: 68%;
+}
 .screen-header img {
     position: absolute;
     
@@ -99,19 +174,21 @@ body {
 }
 
 /* MESSAGES */
-.color-left{
+.left{
     color: var(--moderate-violet);
     font-size: 9px;
     padding: 4px ;
     width: 80%;
+
+    
 }
-.color-right{
+.right{
     color:var(--dark-violet);
     font-size: 9px;
     padding: 2px 0px 0px 6px;
     width: 80%;
     
-
+    
 }
 .message1{
     width: 110px;
@@ -119,7 +196,7 @@ body {
     margin: 5px 5px;
     border-radius: 8px 8px 8px 0px;
 
-    background-color: var(--white);
+    background-color: #ede5f2;
 }
 .message2{
     width: 110px;
@@ -127,7 +204,7 @@ body {
     margin: 5px 5px;
     border-radius: 8px 8px 8px 0px;
 
-    background-color: var(--white);
+    background-color: #ede5f2;
 }
 .message3{
     position: relative;
@@ -183,14 +260,14 @@ body {
     margin: 5px 5px;
     border-radius: 8px 8px 8px 0px;
 
-    background-color: var(--white);
+    background-color: #ede5f2;
 }
 .walk-box1{
     position: absolute;
-    top: 70%;
+    top: 69%;
 
     width: 140px;
-    height: 24px;
+    height: 30px;
     margin: 5px 5px;
     border-radius: 8px 8px 8px 2px;
 
@@ -202,7 +279,7 @@ body {
     top: 78%;
 
     width: 140px;
-    height: 24px;
+    height: 30px;
     margin: 5px 5px;
     border-radius: 8px 8px 8px 2px;
 
@@ -211,7 +288,7 @@ body {
 }
 .circle{
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 7%;
     height: 9px;
     background-color: none;
@@ -219,15 +296,127 @@ body {
     border-radius: 40px;
     border: 2px solid var(--very-light-magenta);
 }
+.walk-box1 p, .walk-box2 p{
+    position: absolute;
+    top: 33%;
+    left: 20%;
+    color: var(--very-light-magenta);
+    z-index: 1;
+    font-size: 9px;
+}
+.walk-box1 span, .walk-box2 span{
+    position: absolute;
+    top: 25%;
+    left: 78%;
+    color: var(--white);
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 700;
+}
 .type-box{
     position: absolute;
-    top: 89%;
+    top: 89.5%;
 
-    width: 90%;
-    height: 28px;
-    margin: 0px 10px;
+    width: 95%;
+    height: 32px;
+    margin: 0px 5px 0px 5px;;
     
     border-radius: 15px;
 
     background-color: var(--white);
+}
+.type-box p{
+    font-size: 9px;
+    margin: 10px 0px 0px 18px;
+
+    color:var(--dark-grayish-violet)
+}
+.message-button{
+    position: absolute;
+    right: 3%;
+    top: 15%;
+
+    height: 23px;
+    width: 23px;
+    border-radius: 25px;;
+   
+    background-color: var(--very-dark-desaturated-violet);
+}
+.send-arrow1{
+    position: absolute;
+    left: 47%;
+    top: 25%;
+
+    height: 7px;
+    width: 2px;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+
+    background-color: var(--white);
+}
+.send-arrow2{
+    position: absolute;
+    left: 47%;
+    top: 42%;
+
+    height: 7px;
+    width: 2px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+
+    background-color: var(--white);
+}
+/*Caption */
+.caption{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 300px;
+    margin-left: 40px;
+}
+.caption h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--very-dark-desaturated-violet);
+}
+.caption p{
+    color:var(--dark-grayish-violet);
+    line-height: 25px;
+}
+@media only screen and (max-width: 650px){
+    body {
+        max-width: 375px;
+    }
+    .background-shape{
+        position: absolute;
+        width: 80%;
+        height: 400px;
+        background:linear-gradient(200deg, var(--light-magenta), var(--light-violet));
+        border-radius: 0 0 299px 299px;
+        margin-left: -100px;
+        margin-top: -40px;
+        z-index: -1;
+    }
+    .screen{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 40px;
+
+    }
+    .background-shape2{
+        display: none;
+    }
+    .caption{
+        position: relative;
+        top: 00%;
+        left: 00%;
+        max-width: 260px;
+        margin: 100px auto 0px auto;
+        text-align: center;
+    }
+    .caption h1{
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
 }
